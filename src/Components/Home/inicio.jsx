@@ -37,7 +37,7 @@ const Home = () => {
 
       <section className="hero-section">
         <div className="hero-content">
-          <h1>Bienvenidos a Eurocolors</h1>
+          <h1>Bienvenidos a Eurocolor</h1>
           <p>Calidad y confiabilidad en cada uno de nuestros productos</p>
         </div>
       </section>

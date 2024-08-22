@@ -12,6 +12,8 @@ import aguja4 from './aguja4.png';
 import aguja5 from './aguja5.png';
 import aguja6 from './aguja6.png';
 import aguja7 from './aguja7.png';
+import aguja8 from './aguja8.png';
+import aguja9 from './aguja9.png';
 import aguja10 from './aguja10.png';
 import aguja11 from './aguja11.png';
 import aguja12 from './aguja12.png';
@@ -161,6 +163,8 @@ const images = {
   'aguja5.png': aguja5,
   'aguja6.png': aguja6,
   'aguja7.png': aguja7,
+  'aguja8.png': aguja8,
+  'aguja9.png': aguja9,
   'aguja10.png': aguja10,
   'aguja11.png': aguja11,
   'aguja12.png': aguja12,

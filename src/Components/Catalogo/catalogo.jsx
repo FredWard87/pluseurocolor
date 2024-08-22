@@ -560,25 +560,25 @@ const products = [
   {
     name: 'Kit modelador de Arcilla Flexible(M)',
     series: 'EFM10487',
-    image: images['modelador1.png'],
+    image: images['modelador1.jpg'],
     category: 'Herramientas'
   },
   {
     name: 'Kit Modelador de Arcilla Firme(M)',
     series: 'EFM10488',
-    image: images['modelador2.png'],
+    image: images['modelador2.jpg'],
     category: 'Herramientas'
   },
   {
     name: 'Kit Modelador de Arcilla Flexible(S)',
     series: 'EFS10485',
-    image: images['modelador3.png'],
+    image: images['modelador3.jpg'],
     category: 'Herramientas'
   },
   {
     name: 'Kit Modelador de Arcilla Firme(S)',
     series: 'EFS10486',
-    image: images['modelador4.png'],
+    image: images['modelador4.jpg'],
     category: 'Herramientas'
   },
   {
