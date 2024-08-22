@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './css/catalogo.css';
 import logo from '../assets/images/eurocolorpng.png'; 
 import images from '../assets/images/index.js';
+import { useLocation } from 'react-router-dom';
 
 
 const products = [
@@ -876,6 +877,16 @@ const CatalogoPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('Pigmentos'); // Inicialmente se selecciona 'Pigmentos'
   const [searchTerm, setSearchTerm] = useState(''); // Estado para el término de búsqueda
 
+  const location = useLocation(); // Usar useLocation para obtener la categoría de la URL
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const category = queryParams.get('category');
+    if (category) {
+      setSelectedCategory(category);
+    }
+  }, [location]);
+
   const categorySynonyms = {
     'Pigmentos': ['pigmento', 'colorante'],
     'Colores para Pasta': ['colores', 'pasta', 'colorante pasta'],
@@ -979,6 +990,7 @@ const CatalogoPage = () => {
               <img src={product.image} alt={product.name} />
               <h3>{product.name}</h3>
               <p>{product.series}</p>
+              <p className="product-category">Categoría: {product.category}</p> {/* Añadimos la categoría aquí */}
             </div>
           ))}
         </div>

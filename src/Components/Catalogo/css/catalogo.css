@@ -73,6 +73,14 @@
     border-bottom: 1px solid #ff0000;
 }
 
+.product-category {
+    font-size: 1.4em; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hacer la fuente en negrita */
+    color: #ff0000; /* Cambia el color del texto a rojo para mayor visibilidad */
+    margin-top: 10px; /* Añade espacio adicional encima */
+    text-align: center; /* Centrar el texto */
+}
+
 .navbar-search input {
     border: none;
     outline: none;
@@ -278,7 +286,9 @@
         width: 100%;
         margin-top: 10px;
     }
-
+    .product-category {
+        font-size: 1.2em; /* Ajusta el tamaño de la fuente en pantallas más pequeñas */
+    }
     .navbar-search input {
         width: 100%;
     }
@@ -315,6 +325,10 @@
 @media (max-width: 480px) {
     .catalogo-categorias h2 {
         font-size: 20px;
+    }
+
+    .product-category {
+        font-size: 1.1em; /* Ajusta el tamaño de la fuente en pantallas móviles */
     }
 
     .catalogo-categorias ul li {

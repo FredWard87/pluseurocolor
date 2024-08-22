@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate para manejar la navegación
+import { useNavigate } from 'react-router-dom';
 import './css/inicio.css';
 import logo from '../assets/images/eurocolorpng.png'; 
 import pigmento from '../assets/images/pigmentos_thumb.jpg';
@@ -8,8 +8,8 @@ import herramientas from '../assets/images/herramientas_thumb.jpg';
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState(''); // Estado para el término de búsqueda
-  const navigate = useNavigate(); // Hook para navegar programáticamente
+  const [searchTerm, setSearchTerm] = useState(''); 
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,9 +21,30 @@ const Home = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    const category = searchTerm.trim();
-    if (category) {
-      navigate(`/catalogo?category=${encodeURIComponent(category)}`); // Navegar a la página de catálogo con la categoría
+    const lowerCaseSearchTerm = searchTerm.trim().toLowerCase();
+
+    const categorySynonyms = {
+      'Pigmentos': ['pigmento', 'colorante'],
+      'Colores para Pasta': ['colores', 'pasta', 'colorante pasta'],
+      'Granilla': ['granillas', 'grano', 'partículas'],
+      'Esmaltes': ['esmalte', 'barniz'],
+      'Materias Primas': ['material', 'materia prima', 'materiales'],
+      'Aditivos': ['aditivo', 'aditivos'],
+      'Herramientas': ['herramienta', 'utensilios', 'instrumento', 'modelado','rib','aguja'],
+      'Otros': ['otro', 'diverso', 'varios']
+    };
+
+    let matchedCategory = Object.keys(categorySynonyms).find(category => {
+      const lowerCaseCategory = category.toLowerCase();
+      const synonyms = categorySynonyms[category].map(synonym => synonym.toLowerCase());
+
+      return lowerCaseCategory.includes(lowerCaseSearchTerm) || synonyms.some(synonym => synonym.includes(lowerCaseSearchTerm));
+    });
+
+    if (matchedCategory) {
+      navigate(`/catalogo?category=${matchedCategory}&search=${lowerCaseSearchTerm}`);
+    } else {
+      navigate(`/catalogo?search=${lowerCaseSearchTerm}`);
     }
   };
 
@@ -35,19 +56,21 @@ const Home = () => {
             <img src={logo} alt="Logo Empresa" className="logo-empresa-login" />
           </div>
           <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
-            <li className="navbar-item"><a href="/catalogo">CATALOGÓ</a></li>
+            <li className="navbar-item"><a href="/catalogo">CATÁLOGO</a></li>
             <li className="navbar-item"><a href="/Nosotros">¿QUIÉNES SOMOS?</a></li>
             <li className="navbar-item"><a href="/ubicacion">UBICA TU TIENDA</a></li>
           </ul>
-          <form className="navbar-search" onSubmit={handleSearchSubmit}>
-            <input 
-              type="text" 
-              placeholder="Buscar categoría..." 
-              value={searchTerm}
-              onChange={handleSearchChange} 
-            />
-            <button type="submit">🔍</button>
-          </form>
+          <div className="navbar-search">
+            <form onSubmit={handleSearchSubmit}>
+              <input 
+                type="text" 
+                placeholder="Buscar..." 
+                value={searchTerm}
+                onChange={handleSearchChange} 
+              />
+              <button type="submit">🔍</button>
+            </form>
+          </div>
           <div className="menu-icon" onClick={toggleMenu}>
             ☰
           </div>
