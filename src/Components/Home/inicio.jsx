@@ -21,7 +21,7 @@ const Home = () => {
             <img src={logo} alt="Logo Empresa" className="logo-empresa-login" />
           </div>
           <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
-            <li className="navbar-item"><a href="/catalogo">CATALOGO</a></li>
+            <li className="navbar-item"><a href="/catalogo">CATALOGÓ</a></li>
             <li className="navbar-item"><a href="/Nosotros">¿QUIÉNES SOMOS?</a></li>
             <li className="navbar-item"><a href="#ubicacion">UBICA TU TIENDA</a></li>
           </ul>

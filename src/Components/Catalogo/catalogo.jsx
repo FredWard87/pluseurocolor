@@ -812,37 +812,37 @@ const products = [
   {
     name: 'Set sello de letras (Mayúscula)',
     series: 'ESLL10297',
-    image: images['sello1.png'],
+    image: images['sello1.jpg'],
     category: 'Herramientas'
   },
   {
     name: 'Set sello de letras (Minúscula)',
     series: 'ESLM10296',
-    image: images['sello1.png'],
+    image: images['sello2.jpg'],
     category: 'Herramientas'
   },
   {
     name: 'Set sello de números',
     series: 'ESN10298',
-    image: images['sello1.png'],
+    image: images['sello3.jpg'],
     category: 'Herramientas'
   },
   {
     name: 'Ribs para decorar set A',
     series: 'ERA10224',
-    image: images['set1.png'],
+    image: images['set1.jpg'],
     category: 'Herramientas'
   },
   {
     name: 'Ribs para decorar set B',
     series: 'ERB10225',
-    image: images['set2.png'],
+    image: images['set2.jpg'],
     category: 'Herramientas'
   },
   {
     name: 'Ribs para decorar set C',
     series: 'ERC10226',
-    image: images['set3.png'],
+    image: images['set3.jpg'],
     category: 'Herramientas'
   },
   {
