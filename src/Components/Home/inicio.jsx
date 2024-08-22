@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate para manejar la navegación
 import './css/inicio.css';
 import logo from '../assets/images/eurocolorpng.png'; 
 import pigmento from '../assets/images/pigmentos_thumb.jpg';
@@ -8,9 +8,23 @@ import herramientas from '../assets/images/herramientas_thumb.jpg';
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(''); // Estado para el término de búsqueda
+  const navigate = useNavigate(); // Hook para navegar programáticamente
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    const category = searchTerm.trim();
+    if (category) {
+      navigate(`/catalogo?category=${encodeURIComponent(category)}`); // Navegar a la página de catálogo con la categoría
+    }
   };
 
   return (
@@ -25,10 +39,15 @@ const Home = () => {
             <li className="navbar-item"><a href="/Nosotros">¿QUIÉNES SOMOS?</a></li>
             <li className="navbar-item"><a href="#ubicacion">UBICA TU TIENDA</a></li>
           </ul>
-          <div className="navbar-search">
-            <input type="text" placeholder="Buscar..." />
+          <form className="navbar-search" onSubmit={handleSearchSubmit}>
+            <input 
+              type="text" 
+              placeholder="Buscar categoría..." 
+              value={searchTerm}
+              onChange={handleSearchChange} 
+            />
             <button type="submit">🔍</button>
-          </div>
+          </form>
           <div className="menu-icon" onClick={toggleMenu}>
             ☰
           </div>

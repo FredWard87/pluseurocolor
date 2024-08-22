@@ -74,6 +74,7 @@ const AboutUs = () => {
         </div>
         <div className="image-container">
         </div>
+
       </div>
 
       <footer className="footer">

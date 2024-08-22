@@ -874,6 +874,18 @@ const products = [
 const CatalogoPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('Pigmentos'); // Inicialmente se selecciona 'Pigmentos'
+  const [searchTerm, setSearchTerm] = useState(''); // Estado para el término de búsqueda
+
+  const categorySynonyms = {
+    'Pigmentos': ['pigmento', 'colorante'],
+    'Colores para Pasta': ['colores', 'pasta', 'colorante pasta'],
+    'Granilla': ['granillas', 'grano', 'partículas'],
+    'Esmaltes': ['esmalte', 'barniz'],
+    'Materias Primas': ['material', 'materia prima', 'materiales'],
+    'Aditivos': ['aditivo', 'aditivos'],
+    'Herramientas': ['herramienta', 'utensilios', 'instrumento'],
+    'Otros': ['otro', 'diverso', 'varios']
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -881,45 +893,84 @@ const CatalogoPage = () => {
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
+    setSearchTerm(''); // Limpiar el término de búsqueda al seleccionar una categoría
   };
 
-  const filteredProducts = products.filter(
-    (product) => product.category === selectedCategory
-  );
-  
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    const lowerCaseSearchTerm = searchTerm.trim().toLowerCase();
+
+    // Buscar coincidencias de categoría o sinónimos
+    let matchedCategory = Object.keys(categorySynonyms).find(category => {
+      const lowerCaseCategory = category.toLowerCase();
+      const synonyms = categorySynonyms[category].map(synonym => synonym.toLowerCase());
+
+      return lowerCaseCategory.includes(lowerCaseSearchTerm) || synonyms.some(synonym => synonym.includes(lowerCaseSearchTerm));
+    });
+
+    if (matchedCategory) {
+      setSelectedCategory(matchedCategory);
+    } else {
+      setSelectedCategory(''); // No se selecciona ninguna categoría si no hay coincidencias
+    }
+  };
+
+  // Filtrar productos basados en la categoría seleccionada y el nombre del producto
+  const filteredProducts = products.filter(product => {
+    const lowerCaseSearchTerm = searchTerm.trim().toLowerCase();
+    const lowerCaseName = product.name.toLowerCase();
+    const isProductInCategory = product.category === selectedCategory;
+    const isNameMatch = lowerCaseName.includes(lowerCaseSearchTerm);
+
     return (
-      <div className="home">
-        <header className="header"> 
-          <div className="navbar">
-            <div className="navbar-logo">
-              <img src={logo} alt="Logo Empresa" className="logo-empresa-login" />
-            </div>
-            <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
-            <li className="navbar-item"><a href="/">INICIO</a></li>
-              <li className="navbar-item"><a href="/Nosotros">¿QUIÉNES SOMOS?</a></li>
-              <li className="navbar-item"><a href="/ubicacion">UBICA TU TIENDA</a></li>
-            </ul>
-            <div className="navbar-search">
-              <input type="text" placeholder="Buscar..." />
-              <button type="submit">🔍</button>
-            </div>
-            <div className="menu-icon" onClick={toggleMenu}>
-              ☰
-            </div>
+      (selectedCategory && isProductInCategory) || // Filtrar por categoría seleccionada
+      (!selectedCategory && isNameMatch) // Si no hay categoría seleccionada, filtrar por búsqueda
+    );
+  });
+
+  return (
+    <div className="home">
+      <header className="header"> 
+        <div className="navbar">
+          <div className="navbar-logo">
+            <img src={logo} alt="Logo Empresa" className="logo-empresa-login" />
           </div>
-        </header>
+          <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
+            <li className="navbar-item"><a href="/">INICIO</a></li>
+            <li className="navbar-item"><a href="/Nosotros">¿QUIÉNES SOMOS?</a></li>
+            <li className="navbar-item"><a href="/ubicacion">UBICA TU TIENDA</a></li>
+          </ul>
+          <form className="navbar-search" onSubmit={handleSearchSubmit}>
+            <input 
+              type="text" 
+              placeholder="Buscar categoría o producto..." 
+              value={searchTerm}
+              onChange={handleSearchChange} 
+            />
+            <button type="submit">🔍</button>
+          </form>
+          <div className="menu-icon" onClick={toggleMenu}>
+            ☰
+          </div>
+        </div>
+      </header>
 
       <div className="catalogo-contenido">
         <div className="catalogo-categorias">
           <ul>
-            <li onClick={() => handleCategoryClick('Pigmentos')}>Pigmentos</li>
-            <li onClick={() => handleCategoryClick('Colores para Pasta')}>Colores para Pasta</li>
-            <li onClick={() => handleCategoryClick('Granilla')}>Granilla</li>
-            <li onClick={() => handleCategoryClick('Esmaltes')}>Esmaltes</li>
-            <li onClick={() => handleCategoryClick('Materias Primas')}>Materias Primas</li>
-            <li onClick={() => handleCategoryClick('Aditivos')}>Aditivos</li>
-            <li onClick={() => handleCategoryClick('Herramientas')}>Herramientas</li>
-            <li onClick={() => handleCategoryClick('Otros')}>Otros</li>
+            {Object.keys(categorySynonyms).map(category => (
+              <li
+                key={category}
+                className={selectedCategory === category ? 'active' : ''}
+                onClick={() => handleCategoryClick(category)}
+              >
+                {category}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="catalogo-galeria">

@@ -109,22 +109,28 @@
     justify-content: baseline;
   }
   
+  
   .image-container {
     flex: 1;
     max-width: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-end;
     overflow: hidden;
-  }
-  
-  .about-image {
-    height: 100vh; /* Ajusta la imagen para ocupar la altura completa */
+    margin-left: 20px;
+    position: relative; /* Necesario para que los pseudo-elementos se posicionen correctamente */
+    animation: fadeInImage 1s ease-in-out; /* Animación de entrada para la imagen */
+}
+
+
+.about-image {
+    height: calc(10000px + 60px); /* Extiende la altura de la imagen hacia arriba y hacia abajo */
     width: auto;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
+    animation: slideInFromRight 1s ease-in-out; /* Animación de entrada para la imagen */
+}
   
   /* Section styles */
   .section {
@@ -144,13 +150,12 @@
   
   .section-text {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
-    color: #555;
+    font-size: 1.4em; /* Ajusta si es necesario */
+    color: #303030;
     line-height: 1.8;
     text-align: justify; /* Justifica el texto */
     animation: fadeInUp 1s ease-in-out 0.2s forwards; /* Animación de entrada */
-  }
-  
+}
   .values-list {
     list-style-type: none;
     padding: 0;
@@ -192,6 +197,28 @@
     from {
         opacity: 0;
         transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    
+}
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
     }
     to {
         opacity: 1;

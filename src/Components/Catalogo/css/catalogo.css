@@ -115,7 +115,6 @@
     animation: slideInLeft 0.7s ease-in-out; /* Animación de entrada desde la izquierda */
 }
 
-
 .catalogo-categorias:hover {
     transform: scale(1.02); /* Escala ligera al hacer hover */
 }
@@ -136,41 +135,55 @@
     margin-bottom: 20px; /* Más espacio entre los elementos */
     padding: 0;
     justify-content: space-around; /* Distribuir espacio uniformemente */
-
+}
+.catalogo-categorias ul li.active {
+    background-color: #f8d7da; /* Color de fondo suave y elegante para resaltar */
+    color: #721c24; /* Color del texto para contraste */
+    border-radius: 5px; /* Bordes redondeados para un toque más elegante */
+    padding: 10px; /* Espacio interno adicional */
+    font-weight: bold; /* Mayor énfasis en el texto */
+}
+.catalogo-categorias ul li.active:hover {
+    background-color: #f5c6cb; /* Color más claro al hacer hover */
+    color: #491217; /* Color del texto más oscuro para resaltar */
 }
 
 .catalogo-categorias ul li {
     font-size: 18px;
-    margin-bottom: 65px; /* Espacio aumentado entre los ítems */
+    margin-bottom: 65px;
     cursor: pointer;
-    transition: transform 0.3s ease, text-decoration 0.3s ease; /* Transición suave para el hover */
+    transition: transform 0.3s ease, text-decoration 0.3s ease, background-color 0.3s ease; /* Transición suave para el hover y el color de fondo */
 }
+
 .catalogo-galeria {
     flex: 3;
     display: grid;
-    height: 40%;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas */
     gap: 10px; /* Espacio reducido entre las cards */
+}
+
+.catalogo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrar contenido verticalmente */
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(161, 161, 161, 0.1);
+    animation: fadeInUp 0.7s ease-in-out;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 100%; /* Asegura que la card ocupe todo el espacio disponible */
 }
 
 .catalogo-item:hover {
     transform: scale(1.05); /* Escala ligera al hacer hover */
 }
-.catalogo-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 15px; /* Padding reducido */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(161, 161, 161, 0.1); /* Sombra ligera */
-    animation: fadeInUp 0.7s ease-in-out; /* Animación de entrada suave desde abajo */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para hover */
-    height: 100%; /* Asegura que la card ocupe todo el espacio disponible */
-}
 
 .catalogo-item img {
-    width: 150px; /* Imagen pequeña */
-    height: auto;
+    max-width: 100%;
+    max-height: 100%; /* Asegura que la imagen no exceda los límites de la tarjeta */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
     margin-bottom: 8px;
 }
 
@@ -265,7 +278,6 @@
         width: 100%;
         margin-top: 10px;
     }
-
 
     .navbar-search input {
         width: 100%;
