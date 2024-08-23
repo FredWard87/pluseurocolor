@@ -59,6 +59,8 @@ const Home = () => {
             <li className="navbar-item"><a href="/catalogo">CATÁLOGO</a></li>
             <li className="navbar-item"><a href="/Nosotros">¿QUIÉNES SOMOS?</a></li>
             <li className="navbar-item"><a href="/ubicacion">UBICA TU TIENDA</a></li>
+            <li className="navbar-item"><a href="/catalogó-Eurocolor.pdf" className="download-button" download>DESCARGA NUESTRO CATÁLOGO</a>
+            </li>
           </ul>
           <div className="navbar-search">
             <form onSubmit={handleSearchSubmit}>

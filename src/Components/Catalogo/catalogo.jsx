@@ -874,10 +874,11 @@ const products = [
 
 const CatalogoPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('Pigmentos'); // Inicialmente se selecciona 'Pigmentos'
-  const [searchTerm, setSearchTerm] = useState(''); // Estado para el término de búsqueda
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Nuevo estado para controlar el menú desplegable
+  const [selectedCategory, setSelectedCategory] = useState('Pigmentos');
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const location = useLocation(); // Usar useLocation para obtener la categoría de la URL
+  const location = useLocation();
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
@@ -902,9 +903,15 @@ const CatalogoPage = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-    setSearchTerm(''); // Limpiar el término de búsqueda al seleccionar una categoría
+    setIsMenuOpen(false);
+    setIsDropdownOpen(false); // Cierra el dropdown al seleccionar una categoría
+    setSearchTerm('');
   };
 
   const handleSearchChange = (event) => {
@@ -915,7 +922,6 @@ const CatalogoPage = () => {
     event.preventDefault();
     const lowerCaseSearchTerm = searchTerm.trim().toLowerCase();
 
-    // Buscar coincidencias de categoría o sinónimos
     let matchedCategory = Object.keys(categorySynonyms).find(category => {
       const lowerCaseCategory = category.toLowerCase();
       const synonyms = categorySynonyms[category].map(synonym => synonym.toLowerCase());
@@ -925,12 +931,14 @@ const CatalogoPage = () => {
 
     if (matchedCategory) {
       setSelectedCategory(matchedCategory);
+      setIsMenuOpen(false);
+      setIsDropdownOpen(false); // Cierra el dropdown al realizar la búsqueda
     } else {
-      setSelectedCategory(''); // No se selecciona ninguna categoría si no hay coincidencias
+      setSelectedCategory('');
     }
   };
 
-  // Filtrar productos basados en la categoría seleccionada y el nombre del producto
+
   const filteredProducts = products.filter(product => {
     const lowerCaseSearchTerm = searchTerm.trim().toLowerCase();
     const lowerCaseName = product.name.toLowerCase();
@@ -938,8 +946,8 @@ const CatalogoPage = () => {
     const isNameMatch = lowerCaseName.includes(lowerCaseSearchTerm);
 
     return (
-      (selectedCategory && isProductInCategory) || // Filtrar por categoría seleccionada
-      (!selectedCategory && isNameMatch) // Si no hay categoría seleccionada, filtrar por búsqueda
+      (selectedCategory && isProductInCategory) || 
+      (!selectedCategory && isNameMatch)
     );
   });
 
@@ -971,8 +979,12 @@ const CatalogoPage = () => {
       </header>
 
       <div className="catalogo-contenido">
-        <div className="catalogo-categorias">
-          <ul>
+        <div className="dropdown-header" onClick={toggleDropdown}>
+          <span>{selectedCategory || 'Seleccione una categoría'}</span>
+          <span className={`arrow ${isDropdownOpen ? 'open' : ''}`}>▼</span>
+        </div>
+        <div className={`catalogo-categorias ${isDropdownOpen ? 'menu-open' : ''}`}>
+          <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
             {Object.keys(categorySynonyms).map(category => (
               <li
                 key={category}
@@ -990,7 +1002,7 @@ const CatalogoPage = () => {
               <img src={product.image} alt={product.name} />
               <h3>{product.name}</h3>
               <p>{product.series}</p>
-              <p className="product-category">Categoría: {product.category}</p> {/* Añadimos la categoría aquí */}
+              <p className="product-category">Categoría: {product.category}</p>
             </div>
           ))}
         </div>

@@ -18,7 +18,7 @@ const AboutUs = () => {
           </div>
           <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           <li className="navbar-item"><a href="/">INICIO</a></li>
-            <li className="navbar-item"><a href="/catalogo">CATALOGÓ</a></li>
+            <li className="navbar-item"><a href="/catalogo">CATÁLOGO</a></li>
             <li className="navbar-item"><a href="/ubicacion">UBICA TU TIENDA</a></li>
           </ul>
           <div className="menu-icon" onClick={toggleMenu}>
@@ -26,7 +26,7 @@ const AboutUs = () => {
           </div>
         </div>
       </header>
-
+     
       <div className="about-content-container">
         <div className="text-container">
           <section className="section">
@@ -68,8 +68,7 @@ const AboutUs = () => {
             </p>
           </section>
         </div>
-        <div className="image-container">
-        </div>
+       
 
       </div>
 
