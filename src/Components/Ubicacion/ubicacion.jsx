@@ -14,8 +14,8 @@ const MapComponent = () => {
 
   const locations = [
     {
-      lat: 19.4969,
-      lng: -99.1269,
+      lat: 21.1480786,
+      lng: -100.970547,
       name: 'Sucursal Lindavista',
       address: 'Av. División del Norte #139',
       colonia: 'Lindavista',
