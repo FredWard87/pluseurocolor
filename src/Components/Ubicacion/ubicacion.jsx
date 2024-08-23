@@ -25,7 +25,7 @@ const MapComponent = () => {
     {
       lat: 21.1505664,
       lng: -101.0341733,
-      name: 'Eurocolor Insumos cerámicos',
+      name: 'Sucursal Centro',
       address: 'Av. Renovación #22',
       colonia: 'Centro',
       phone: '418 690 32 97',
