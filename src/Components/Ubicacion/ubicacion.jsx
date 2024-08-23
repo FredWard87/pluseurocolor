@@ -24,12 +24,12 @@ const MapComponent = () => {
     },
     {
       lat: 21.1505664,
-      lng: -101.0058209,
-      name: 'Sucursal Centro',
+      lng: -101.0341733,
+      name: 'Eurocolor Insumos cerámicos',
       address: 'Av. Renovación #22',
       colonia: 'Centro',
       phone: '418 690 32 97',
-      mapsLink: 'https://www.google.com/maps/place/Eurocolor+Insumos+cer%C3%A1micos/@21.1505664,-101.0058209,13z/data=!4m10!1m2!2m1!1seurocolor!3m6!1s0x842b3fd35eb64b25:0xacc42015266b27c4!8m2!3d21.1573916!4d-100.9286728!15sCglldXJvY29sb3IiA4gBAZIBE2NlcmFtaWNzX3dob2xlc2FsZXLgAQA!16s%2Fg%2F11rk54rpy_?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D',
+      mapsLink: 'https://www.google.com/maps/place/Eurocolor+Insumos+cer%C3%A1micos/@21.1505664,-101.0341733,13z/data=!4m10!1m2!2m1!1seurocolor!3m6!1s0x842b3fd35eb64b25:0xacc42015266b27c4!8m2!3d21.1573916!4d-100.9286728!15sCglldXJvY29sb3IiA4gBAZIBE2NlcmFtaWNzX3dob2xlc2FsZXLgAQA!16s%2Fg%2F11rk54rpy_?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D',
     },
   ];
 
