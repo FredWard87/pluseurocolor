@@ -33,7 +33,7 @@ const MapComponent = () => {
     },
   ];
 
-  const defaultPosition = [19.4969, -99.1269];
+  const defaultPosition = [21.154526, -100.9526012];
 
   // Definir el icono fuera del mapa para reutilizarlo
   const markerIcon = L.icon({
