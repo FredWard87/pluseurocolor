@@ -20,7 +20,7 @@ const MapComponent = () => {
       address: 'Av. División del Norte #139',
       colonia: 'Lindavista',
       phone: '418 120 09 22',
-      mapsLink: 'https://www.google.com/maps?q=Av.+División+del+Norte+139+Lindavista',
+      mapsLink: 'https://www.google.com/maps/place/Eurocolor/@21.1480786,-100.970547,13.67z/data=!4m10!1m2!2m1!1seurocolor!3m6!1s0x842b3fdc503b6607:0x3724936240801657!8m2!3d21.1505664!4d-100.9579556!15sCglldXJvY29sb3IiA4gBAVoLIglldXJvY29sb3KSAQVzdG9yZeABAA!16s%2Fg%2F11q1mc2wj6?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D',
     },
     {
       lat: 19.4967,
