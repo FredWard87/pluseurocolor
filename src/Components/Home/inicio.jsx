@@ -5,6 +5,10 @@ import logo from '../assets/images/eurocolorpng.png';
 import pigmento from '../assets/images/pigmentos_thumb.jpg';
 import lapices from '../assets/images/lapices_thumb.jpeg';
 import herramientas from '../assets/images/herramientas_thumb.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -108,14 +112,21 @@ const Home = () => {
       </section>
 
       <section className="contact-section">
-        <h2>Contacto</h2>
-        <p>Estamos aquí para ayudarte.</p>
-        <ul>
-          <li>Teléfono: (418) 120-0922</li>
-          <li>Whatsapp: (418) 115-4073</li>
-          <li>Email: eurocolor.ceramicos@gmail.com</li>
-        </ul>
-      </section>
+  <h2>Contacto</h2>
+  <p>Estamos aquí para ayudarte.</p>
+  <ul>
+    <li>
+      <FontAwesomeIcon icon={faPhone} /> Teléfono: (418) 120-0922
+    </li>
+    <li>
+      <FontAwesomeIcon icon={faWhatsapp} /> Whatsapp: (418) 115-4073
+    </li>
+    <li>
+      <FontAwesomeIcon icon={faEnvelope} /> Email: eurocolor.ceramicos@gmail.com
+    </li>
+  </ul>
+</section>
+
 
       <footer className="footer">
         <p>&copy; 2024 Eurocolor. Todos los derechos reservados.</p>
