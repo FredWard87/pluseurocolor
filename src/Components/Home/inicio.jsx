@@ -113,7 +113,7 @@ const Home = () => {
         <ul>
           <li>Teléfono: (418) 120-0922</li>
           <li>Whatsapp: (418) 115-4073</li>
-          <li>Email: EUROCOLOR.CERAMICOS@GMAIL.COM</li>
+          <li>Email: eurocolor.ceramicos@gmail.com</li>
         </ul>
       </section>
 
