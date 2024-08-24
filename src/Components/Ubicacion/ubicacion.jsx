@@ -31,6 +31,15 @@ const MapComponent = () => {
       phone: '418 690 32 97',
       mapsLink: 'https://www.google.com/maps/place/Eurocolor+Insumos+cer%C3%A1micos/@21.1505664,-101.0341733,13z/data=!4m10!1m2!2m1!1seurocolor!3m6!1s0x842b3fd35eb64b25:0xacc42015266b27c4!8m2!3d21.1573916!4d-100.9286728!15sCglldXJvY29sb3IiA4gBAZIBE2NlcmFtaWNzX3dob2xlc2FsZXLgAQA!16s%2Fg%2F11rk54rpy_?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D',
     },
+      {
+    lat: 21.154526, 
+    lng: -100.9526012,
+    name: 'Sucursal San Pablo',
+    address: 'Camino a San Pablo #3',
+    colonia: '12 de Octubre',
+    phone: '418 19 82 83',
+    mapsLink: 'https://www.google.com/maps/place/Sucursal+San+Pablo/@21.154526,-100.9526012,13z/data=!4m10!1m2!2m1!1ssucursal+san+pablo!3m6!1s0x842b3fdc7c58275f:0x1f11b43e1b364a44!8m2!3d21.154526!4d-100.9526012!15sCgtzdWN1cnNhbCBzYW4gcGFibGySAQZzdG9yZQ!16s%2Fg%2F11r5d3jq_l?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D',
+  },
   ];
 
   const defaultPosition = [21.154526, -100.9526012];
