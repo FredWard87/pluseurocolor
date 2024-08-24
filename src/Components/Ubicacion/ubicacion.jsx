@@ -23,13 +23,13 @@ const MapComponent = () => {
       mapsLink: 'https://www.google.com/maps/place/Eurocolor/@21.1480786,-100.970547,13.67z/data=!4m10!1m2!2m1!1seurocolor!3m6!1s0x842b3fdc503b6607:0x3724936240801657!8m2!3d21.1505664!4d-100.9579556!15sCglldXJvY29sb3IiA4gBAVoLIglldXJvY29sb3KSAQVzdG9yZeABAA!16s%2Fg%2F11q1mc2wj6?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D',
     },
     {
-      lat: 21.1505664,
-      lng: -101.0341733,
+      lat: 21.1573916,
+      lng: -100.9667816,
       name: 'Sucursal Centro',
       address: 'Av. Renovación #22',
       colonia: 'Centro',
       phone: '418 690 32 97',
-      mapsLink: 'https://www.google.com/maps/place/Eurocolor+Insumos+cer%C3%A1micos/@21.1505664,-101.0341733,13z/data=!4m10!1m2!2m1!1seurocolor!3m6!1s0x842b3fd35eb64b25:0xacc42015266b27c4!8m2!3d21.1573916!4d-100.9286728!15sCglldXJvY29sb3IiA4gBAZIBE2NlcmFtaWNzX3dob2xlc2FsZXLgAQA!16s%2Fg%2F11rk54rpy_?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D',
+      mapsLink: 'https://www.google.com.mx/maps/place/Eurocolor+Insumos+cer%C3%A1micos/@21.1573916,-100.9667816,14z/data=!4m10!1m2!2m1!1seurocolor!3m6!1s0x842b3fd35eb64b25:0xacc42015266b27c4!8m2!3d21.1573916!4d-100.9286728!15sCglldXJvY29sb3IiA4gBAZIBE2NlcmFtaWNzX3dob2xlc2FsZXLgAQA!16s%2Fg%2F11rk54rpy_?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D',
     },
       {
     lat: 21.1479748, 
