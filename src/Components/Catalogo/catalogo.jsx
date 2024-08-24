@@ -19,13 +19,13 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Azul',
+    name: 'Azul Turquiza',
     series: 'CE5527',
     image: images['pigmento3.png'],
     category: 'Pigmentos'
   },
   {
-    name: 'Café',
+    name: 'Marron Oscuro',
     series: 'CE8955',
     image: images['pigmento4.png'],
     category: 'Pigmentos'
@@ -37,43 +37,43 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Negro',
+    name: 'Negro de Niquel ',
     series: 'CE5208',
     image: images['pigmento6.png'],
     category: 'Pigmentos'
   },
   {
-    name: 'Rosa',
+    name: 'Rojo',
     series: 'CE6344',
     image: images['pigmento7.png'],
     category: 'Pigmentos'
   },
   {
-    name: 'Negro grisáceo',
+    name: 'Negro Cobalto',
     series: 'CE5229',
     image: images['pigmento8.png'],
     category: 'Pigmentos'
   },
   {
-    name: 'Jade',
+    name: 'Verde Jade',
     series: 'CE7030',
     image: images['pigmento9.png'],
     category: 'Pigmentos'
   },
   {
-    name: 'Rex',
+    name: 'Azul Rey',
     series: 'CE5641',
     image: images['pigmento10.png'],
     category: 'Pigmentos'
   },
   {
-    name: 'Hoja',
+    name: 'Verde Hoja',
     series: 'CE7122',
     image: images['pigmento11.png'],
     category: 'Pigmentos'
   },
   {
-    name: 'Lima',
+    name: 'Verde Lima',
     series: 'CE4627',
     image: images['pigmento12.png'],
     category: 'Pigmentos'
@@ -103,7 +103,7 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Naranja A.',
+    name: 'Naranja amarillento.',
     series: 'CE8725',
     image: images['pigmento17.png'],
     category: 'Pigmentos'
@@ -115,7 +115,7 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Amarillo H.',
+    name: 'Amarillo Huevo.',
     series: 'CE4544',
     image: images['pigmento19.png'],
     category: 'Pigmentos'
@@ -139,7 +139,7 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Tangenina',
+    name: 'Tangerina',
     series: 'CE3000',
     image: images['pigmento23.png'],
     category: 'Pigmentos'
@@ -157,7 +157,7 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Menta',
+    name: 'Verde Menta',
     series: 'CE7301',
     image: images['pigmento26.png'],
     category: 'Pigmentos'
@@ -169,13 +169,13 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Verde mayo',
+    name: 'Verde Mayolico',
     series: 'CE7521',
     image: images['pigmento28.png'],
     category: 'Pigmentos'
   },
   {
-    name: 'Cereza',
+    name: 'Rojo Cereza',
     series: 'CE6540',
     image: images['pigmento29.png'],
     category: 'Pigmentos'
@@ -193,7 +193,7 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Amarillo H.',
+    name: 'Amarillo Huevo.',
     series: 'CE4563',
     image: images['pigmento32.png'],
     category: 'Pigmentos'
@@ -308,18 +308,18 @@ const products = [
   },
   {
     name: 'Alúmina',
-    series: '',
+    series: 'PO105',
     image: images['materia5.png'],
     category: 'Materias Primas'
   },
   {
-    name: '',
+    name: 'Carbonato de barrio',
     series: 'PO116',
     image: images['materia6.png'],
     category: 'Materias Primas'
   },
   {
-    name: '',
+    name: 'Oxido de zinc',
     series: 'PO161',
     image: images['materia7.png'],
     category: 'Materias Primas'
