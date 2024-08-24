@@ -30,7 +30,7 @@ const Home = () => {
     const categorySynonyms = {
       'Pigmentos': ['pigmento', 'colorante'],
       'Colores para Pasta': ['colores', 'pasta', 'colorante pasta'],
-      'Granilla': ['granillas', 'grano', 'partículas'],
+      'Granillas': ['granillas', 'grano', 'partículas'],
       'Esmaltes': ['esmalte', 'barniz'],
       'Materias Primas': ['material', 'materia prima', 'materiales'],
       'Aditivos': ['aditivo', 'aditivos'],
