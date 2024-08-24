@@ -109,16 +109,16 @@ const Home = () => {
 
       <section className="contact-section">
         <h2>Contacto</h2>
-        <p>Estamos aquí para ayudarte. Contáctanos a través de los siguientes medios:</p>
+        <p>Estamos aquí para ayudarte.</p>
         <ul>
           <li>Teléfono: (418) 120-0922</li>
           <li>Whatsapp: (418) 115-4073</li>
-          <li>Email: EUROCOLORS.CERAMICOS@GMAIL.COM</li>
+          <li>Email: EUROCOLOR.CERAMICOS@GMAIL.COM</li>
         </ul>
       </section>
 
       <footer className="footer">
-        <p>&copy; 2024 Eurocolors. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Eurocolor. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
