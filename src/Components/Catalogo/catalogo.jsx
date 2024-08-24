@@ -1002,7 +1002,6 @@ const CatalogoPage = () => {
               <img src={product.image} alt={product.name} />
               <h3>{product.name}</h3>
               <p>{product.series}</p>
-              <p className="product-category">Categoría: {product.category}</p>
             </div>
           ))}
         </div>
