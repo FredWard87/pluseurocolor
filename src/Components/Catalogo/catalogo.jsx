@@ -301,7 +301,7 @@ const products = [
     category: 'Materias Primas'
   },
   {
-    name: 'Pacificante',
+    name: 'Opacificante',
     series: 'PO103',
     image: images['materia4.png'],
     category: 'Materias Primas'
