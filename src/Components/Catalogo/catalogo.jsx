@@ -19,7 +19,7 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Azul Turquiza',
+    name: 'Azul Turqueza',
     series: 'CE5527',
     image: images['pigmento3.png'],
     category: 'Pigmentos'
