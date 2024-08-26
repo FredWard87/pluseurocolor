@@ -19,13 +19,13 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Azul Turqueza',
+    name: 'Azul Turquesa',
     series: 'CE5527',
     image: images['pigmento3.png'],
     category: 'Pigmentos'
   },
   {
-    name: 'Marron Oscuro',
+    name: 'Marrón Oscuro',
     series: 'CE8955',
     image: images['pigmento4.png'],
     category: 'Pigmentos'
@@ -103,7 +103,7 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Naranja Amarillento.',
+    name: 'Naranja Amarillento',
     series: 'CE8725',
     image: images['pigmento17.png'],
     category: 'Pigmentos'
@@ -115,7 +115,7 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Amarillo Huevo.',
+    name: 'Amarillo Huevo',
     series: 'CE4544',
     image: images['pigmento19.png'],
     category: 'Pigmentos'
@@ -193,7 +193,7 @@ const products = [
     category: 'Pigmentos'
   },
   {
-    name: 'Amarillo Huevo.',
+    name: 'Amarillo Huevo',
     series: 'CE4563',
     image: images['pigmento32.png'],
     category: 'Pigmentos'
@@ -265,7 +265,7 @@ const products = [
     category: 'Esmaltes'
   },
   {
-    name: 'Esmalte transparente',
+    name: 'Esmalte Transparente',
     series: 'MX4036070',
     image: images['esmalte2.png'],
     category: 'Esmaltes'
@@ -283,7 +283,7 @@ const products = [
     category: 'Esmaltes'
   },
   {
-    name: 'Felspato',
+    name: 'Feldespato',
     series: 'PO102',
     image: images['materia1.png'],
     category: 'Materias Primas'
@@ -313,7 +313,7 @@ const products = [
     category: 'Materias Primas'
   },
   {
-    name: 'Carbonato de Barrio',
+    name: 'Carbonato de Bario',
     series: 'PO116',
     image: images['materia6.png'],
     category: 'Materias Primas'
@@ -325,7 +325,7 @@ const products = [
     category: 'Materias Primas'
   },
   {
-    name: 'Separador de Color',
+    name: 'Separador de Color Talavera',
     series: 'Separador de color',
     image: images['aditivo1.png'],
     category: 'Aditivos'
@@ -595,6 +595,66 @@ const products = [
     category: 'Herramientas'
   },
   {
+    name: 'Kit Botella Aplicador 1 oz',
+    series: 'EB1OZ',
+    image: images['aplicador1.png'],
+    category: 'Herramientas'
+  },
+  {
+    name: 'Set Aplicador de Precisión 2 oz',
+    series: 'EB2OZ',
+    image: images['aplicador2.png'],
+    category: 'Herramientas'
+  },
+  {
+    name: 'Set Aplicador de Precisión 4 oz',
+    series: 'EB4OZ',
+    image: images['aplicador3.png'],
+    category: 'Herramientas'
+  },
+  {
+    name: 'Set Aplicador 8 oz',
+    series: 'EB8OZ',
+    image: images['aplicador4.png'],
+    category: 'Herramientas'
+  },
+  {
+    name: 'Botella Aplicador 8 oz',
+    series: 'EBK8OZ',
+    image: images['aplicador5.png'],
+    category: 'Herramientas'
+  },
+  {
+    name: 'Set Aplicador de Precisión 36 pza',
+    series: 'EBK10',
+    image: images['aplicador6.png'],
+    category: 'Herramientas'
+  },
+  {
+    name: 'Conector para Botella Aplicador 4 y 8 oz',
+    series: 'ECB4-8OZ',
+    image: images['aplicador7.png'],
+    category: 'Herramientas'
+  },
+  {
+    name: 'Set Persilla de Precisión 1 oz',
+    series: 'EPA1OZ',
+    image: images['epa1.png'],
+    category: 'Herramientas'
+  },
+  {
+    name: 'Set Persilla de Precisión 3 oz',
+    series: 'EPA3OZ',
+    image: images['epa2.png'],
+    category: 'Herramientas'
+  },
+  {
+    name: 'Adaptador de Succión para Perilla',
+    series: 'EPA124',
+    image: images['epa3.png'],
+    category: 'Herramientas'
+  },
+  {
     name: 'Aguja Acero #21',
     series: 'EA21G',
     image: images['aguja1.png'],
@@ -751,63 +811,21 @@ const products = [
     category: 'Herramientas'
   },
   {
-    name: 'Kit Botella Aplicador 1 oz',
-    series: 'EB1OZ',
-    image: images['aplicador1.png'],
+    name: 'Ribs para Decorar set A',
+    series: 'ERA10224',
+    image: images['set1.jpg'],
     category: 'Herramientas'
   },
   {
-    name: 'Set Aplicador de Precisión 2 oz',
-    series: 'EB2OZ',
-    image: images['aplicador2.png'],
+    name: 'Ribs para Decorar set B',
+    series: 'ERB10225',
+    image: images['set2.jpg'],
     category: 'Herramientas'
   },
   {
-    name: 'Set Aplicador de Precisión 4 oz',
-    series: 'EB4OZ',
-    image: images['aplicador3.png'],
-    category: 'Herramientas'
-  },
-  {
-    name: 'Set Aplicador 8 oz',
-    series: 'EB8OZ',
-    image: images['aplicador4.png'],
-    category: 'Herramientas'
-  },
-  {
-    name: 'Botella Aplicador 8 oz',
-    series: 'EBK8OZ',
-    image: images['aplicador5.png'],
-    category: 'Herramientas'
-  },
-  {
-    name: 'Set Aplicador de Precisión 36 pza',
-    series: 'EBK10',
-    image: images['aplicador6.png'],
-    category: 'Herramientas'
-  },
-  {
-    name: 'Conector para Botella Aplicador 4 y 8 oz',
-    series: 'ECB4-8OZ',
-    image: images['aplicador7.png'],
-    category: 'Herramientas'
-  },
-  {
-    name: 'Set Persilla de Precisión 1 oz',
-    series: 'EPA1OZ',
-    image: images['epa1.png'],
-    category: 'Herramientas'
-  },
-  {
-    name: 'Set Persilla de Precisión 3 oz',
-    series: 'EPA3OZ',
-    image: images['epa2.png'],
-    category: 'Herramientas'
-  },
-  {
-    name: 'Adaptador de Succión para Perilla',
-    series: 'EPA124',
-    image: images['epa3.png'],
+    name: 'Ribs para Decorar set C',
+    series: 'ERC10226',
+    image: images['set3.jpg'],
     category: 'Herramientas'
   },
   {
@@ -829,33 +847,15 @@ const products = [
     category: 'Herramientas'
   },
   {
-    name: 'Ribs para Decorar set A',
-    series: 'ERA10224',
-    image: images['set1.jpg'],
-    category: 'Herramientas'
-  },
-  {
-    name: 'Ribs para Decorar set B',
-    series: 'ERB10225',
-    image: images['set2.jpg'],
-    category: 'Herramientas'
-  },
-  {
-    name: 'Ribs para Decorar set C',
-    series: 'ERC10226',
-    image: images['set3.jpg'],
-    category: 'Herramientas'
+    name: 'Lápices Cerámicos',
+    series: '',
+    image: images['otro4.png'],
+    category: 'Otros'
   },
   {
     name: 'Rafia Calibre #2',
     series: '',
     image: images['otro1.png'],
-    category: 'Otros'
-  },
-  {
-    name: 'Cordón para Molde de Prensa',
-    series: 'EMT532',
-    image: images['otro2.png'],
     category: 'Otros'
   },
   {
@@ -865,11 +865,12 @@ const products = [
     category: 'Otros'
   },
   {
-    name: 'Lápices Cerámicos',
-    series: '',
-    image: images['otro4.png'],
+    name: 'Cordón para Molde de Prensa',
+    series: 'EMT532',
+    image: images['otro2.png'],
     category: 'Otros'
-  }
+  },
+  
 ];
 
 const CatalogoPage = () => {

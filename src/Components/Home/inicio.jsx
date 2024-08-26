@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './css/inicio.css';
 import logo from '../assets/images/eurocolorpng.png'; 
 import pigmento from '../assets/images/pigmentos_thumb.jpg';
-import lapices from '../assets/images/lapices_thumb.jpeg';
+import lapices from '../assets/images/lapices_thumb.png';
 import herramientas from '../assets/images/herramientas_thumb.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
