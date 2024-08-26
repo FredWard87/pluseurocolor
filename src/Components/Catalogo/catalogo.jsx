@@ -223,7 +223,7 @@ const products = [
     category: 'Colores para Pasta'
   },
   {
-    name: 'Negro Grisáceo',
+    name: 'Marrón Oscuro',
     series: 'CPDMA534',
     image: images['pasta4.png'],
     category: 'Colores para Pasta'
