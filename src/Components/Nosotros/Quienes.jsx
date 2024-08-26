@@ -73,7 +73,7 @@ const AboutUs = () => {
       </div>
 
       <footer className="footer">
-        <p>&copy; 2024 Eurocolors. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Eurocolor. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
